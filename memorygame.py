@@ -43,25 +43,25 @@ while True:
     while len(answer) <4:
         time.sleep(0.3)
         if red_button.is_pressed:
-            answer.append("red")
+            answer.append(LED(2))
             red.on()
             time.sleep(0.1)
             red.off()
             print(answer)
         elif yellow_button.is_pressed:
-            answer.append("yellow")
+            answer.append(LED(3))
             yellow.on()
             time.sleep(0.1)
             yellow.off()
             print(answer)
         elif green_button.is_pressed:
-            answer.append("green")
+            answer.append(LED(4))
             green.on()
             time.sleep(0.1)
             green.off()
             print(answer)
         elif blue_button.is_pressed:
-            answer.append("blue")
+            answer.append(LED(17))
             blue.on()
             time.sleep(0.1)
             blue.off()
@@ -74,5 +74,6 @@ while True:
         for led in leds:
             led.off()
     else:
-        for blinks in range(10):
-            red.blink(on_time=0.1,off_time=0.1)
+        red.blink(on_time=0.1,off_time=0.1)
+        time.sleep(5)
+        red.off()
