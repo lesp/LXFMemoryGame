@@ -32,12 +32,12 @@ while True:
     print("1")
     time.sleep(1)
     print("GO!!!")
-    sequence = random.shuffle(leds)
+    #sequence = random.shuffle(leds)
     #Printing the LED sequence to the Python shell is used for debugging
-    print(sequence)
-    for led in sequence:
+    #print(sequence)
+    for led in leds:
         led.on()
-        time.sleep(0.1)
+        time.sleep(0.5)
         led.off()
     answer = []
     while len(answer) <4:
@@ -66,7 +66,7 @@ while True:
             time.sleep(0.1)
             blue.off()
             print(answer)
-    if sequence == answer:
+    if leds == answer:
         print("YOU WIN!!!")
         for led in leds:
             led.blink(on_time=0.2,off_time=0.2)
