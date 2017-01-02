@@ -69,7 +69,8 @@ while True:
             print(answer)
     for i in range(len(leds)):
         leds[i] = str(leds[i])
-        print(leds)
+        for i in len(leds):
+            print(leds[i])
         print(answer)
     if leds == answer:
         print("YOU WIN!!!")
