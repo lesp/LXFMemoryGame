@@ -39,7 +39,6 @@ leds = ["red","yellow","green","blue"]
 for led in leds:
     lights(led,0.3)
 
-
 while True:
     red_button.wait_for_press()
     print("Standby for light sequence!!!")
@@ -74,9 +73,6 @@ while True:
             answer.append("blue")
             lights("blue",0.1)
             print(answer)
-
-    #for i in range(len(leds)):
-    #    leds[i] = str(leds[i])
     if leds == answer:
         print("YOU WIN!!!")
         for blink in range(10):
