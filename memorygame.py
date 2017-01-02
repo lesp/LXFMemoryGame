@@ -44,26 +44,25 @@ while True:
     while len(answer) <4:
         time.sleep(0.3)
         if red_button.is_pressed:
-            answer.append(<gpiozero.LED object on pin GPIO2, active_high=True, is_active=False>)
+            answer.append("<gpiozero.LED object on pin GPIO2, active_high=True, is_active=False>")
             red.on()
             time.sleep(0.1)
             red.off()
             print(answer)
         elif yellow_button.is_pressed:
-            answer.append(<gpiozero.LED object on pin GPIO3, active_high=True, is_active=False>
-")
+            answer.append("<gpiozero.LED object on pin GPIO3, active_high=True, is_active=False>")
             yellow.on()
             time.sleep(0.1)
             yellow.off()
             print(answer)
         elif green_button.is_pressed:
-            answer.append(<gpiozero.LED object on pin GPIO4, active_high=True, is_active=False>)
+            answer.append("<gpiozero.LED object on pin GPIO4, active_high=True, is_active=False>")
             green.on()
             time.sleep(0.1)
             green.off()
             print(answer)
         elif blue_button.is_pressed:
-            answer.append(<gpiozero.LED object on pin GPIO17, active_high=True, is_active=False>)
+            answer.append("gpiozero.LED object on pin GPIO17, active_high=True, is_active=False>")
             blue.on()
             time.sleep(0.1)
             blue.off()
@@ -71,6 +70,8 @@ while True:
     print(leds)
     print("\n")
     print(answer)
+    for led in leds:
+        led[i] = str(led[i]))
     if leds == answer:
         print("YOU WIN!!!")
         for led in leds:
