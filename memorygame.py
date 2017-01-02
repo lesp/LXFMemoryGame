@@ -71,7 +71,7 @@ while True:
     print("\n")
     print(answer)
     for led in leds:
-        led[i] = str(led[i]))
+        led[i] = str(led[i])
     if leds == answer:
         print("YOU WIN!!!")
         for led in leds:
