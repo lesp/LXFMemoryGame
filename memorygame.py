@@ -35,11 +35,8 @@ while True:
     time.sleep(1)
     print("GO!!!")
     random.shuffle(leds)
-    sequence = leds
-
-    #Printing the LED sequence to the Python shell is used for debugging
-    print(sequence)
     for led in leds:
+        print(led)
         led.on()
         time.sleep(0.5)
         led.off()
