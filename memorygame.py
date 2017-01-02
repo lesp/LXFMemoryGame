@@ -12,30 +12,29 @@ yellow_button = Button(15)
 green_button = Button(18)
 blue_button = Button(23)
 
-def lights(colour):
+def lights(colour,duration):
     if colour == "red":
         red_pin.on()
-        time.sleep(0.2)
+        time.sleep(duration)
         red_pin.off()
-        time.sleep(0.2)
+        time.sleep(duration)
     elif colour == "yellow":
         yellow_pin.on()
-        time.sleep(0.2)
+        time.sleep(duration)
         yellow_pin.off()
-        time.sleep(0.2)
+        time.sleep(duration)
     if colour == "green":
         green_pin.on()
-        time.sleep(0.2)
+        time.sleep(duration)
         green_pin.off()
-        time.sleep(0.2)
+        time.sleep(duration)
     if colour == "blue":
         blue_pin.on()
-        time.sleep(0.2)
+        time.sleep(duration)
         blue_pin.off()
-        time.sleep(0.2)
+        time.sleep(duration)
 
 leds = ["red","yellow","green","blue"]
-
 
 for led in leds:
     lights(led)
@@ -55,7 +54,7 @@ while True:
     random.shuffle(leds)
     for led in leds:
         #print(led)
-        lights(led)
+        lights(led,0.2)
     answer = []
     while len(answer) <4:
         time.sleep(0.3)
@@ -76,16 +75,16 @@ while True:
             lights("blue")
             print(answer)
 
-    for i in range(len(leds)):
-        leds[i] = str(leds[i])
+    #for i in range(len(leds)):
+    #    leds[i] = str(leds[i])
     if leds == answer:
         print("YOU WIN!!!")
         for blink in range(10):
-            lights("red")
-            lights("yellow")
-            lights("green")
-            lights("blue")
+            lights("red",0.1)
+            lights("yellow",0.1)
+            lights("green",0.1)
+            lights("blue",0.1)
     else:
         print("YOU LOSE!!!")
         for blink in range(10):
-            lights("red")
+            lights("red",0.1)
