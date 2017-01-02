@@ -42,7 +42,7 @@ while True:
     answer = []
     while len(answer) <4:
         time.sleep(0.3)
-        if red_button.pressed():
+        if red_button.is_pressed():
             answer.append("red")
             red.on()
             time.sleep(0.1)
