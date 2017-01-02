@@ -70,8 +70,8 @@ while True:
     print(leds)
     print("\n")
     print(answer)
-    for led in leds:
-        leds[led] = str(leds[led])
+    for i in range(len(leds)):
+        leds[i] = str(leds[i])
     if leds == answer:
         print("YOU WIN!!!")
         for led in leds:
