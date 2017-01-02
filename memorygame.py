@@ -89,4 +89,3 @@ while True:
         red.blink(on_time=0.1,off_time=0.1)
         time.sleep(5)
         red.off()
-"""
