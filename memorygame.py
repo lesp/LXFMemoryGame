@@ -80,12 +80,9 @@ while True:
         leds[i] = str(leds[i])
     if leds == answer:
         print("YOU WIN!!!")
-        for led in leds:
-            led.blink(on_time=0.2,off_time=0.2)
-        time.sleep(5)
-        for led in leds:
-            led.off()
+        for blink in range(10):
+            lights("green")
     else:
-        red.blink(on_time=0.1,off_time=0.1)
-        time.sleep(5)
-        red.off()
+        print("YOU LOSE!!!")
+        for blink in range(10):
+            lights("red")
