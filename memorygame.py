@@ -60,19 +60,19 @@ while True:
         time.sleep(0.3)
         if red_button.is_pressed:
             answer.append("red")
-            lights("red")
+            lights("red",0.1)
             print(answer)
         elif yellow_button.is_pressed:
             answer.append("yellow")
-            lights("yellow")
+            lights("yellow",0.1)
             print(answer)
         elif green_button.is_pressed:
             answer.append("green")
-            lights("green")
+            lights("green",0.1)
             print(answer)
         elif blue_button.is_pressed:
             answer.append("blue")
-            lights("blue")
+            lights("blue",0.1)
             print(answer)
 
     #for i in range(len(leds)):
