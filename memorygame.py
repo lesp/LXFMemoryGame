@@ -6,6 +6,7 @@ red = LED(2)
 yellow = LED(3)
 green = LED(4)
 blue = LED(17)
+print(red)
 
 red_button = Button(14)
 yellow_button = Button(15)
