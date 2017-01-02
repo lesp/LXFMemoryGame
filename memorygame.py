@@ -42,25 +42,25 @@ while True:
     answer = []
     while len(answer) <4:
         time.sleep(0.3)
-        if red_button.is_pressed():
+        if red_button.is_pressed() == True:
             answer.append("red")
             red.on()
             time.sleep(0.1)
             red.off()
             print(answer)
-        elif yellow_button.is_pressed():
+        elif yellow_button.is_pressed() == True:
             answer.append("yellow")
             yellow.on()
             time.sleep(0.1)
             yellow.off()
             print(answer)
-        elif green_button.is_pressed():
+        elif green_button.is_pressed() == True:
             answer.append("green")
             green.on()
             time.sleep(0.1)
             green.off()
             print(answer)
-        elif blue_button.is_pressed():
+        elif blue_button.is_pressed() == True:
             answer.append("blue")
             blue.on()
             time.sleep(0.1)
