@@ -67,10 +67,8 @@ while True:
             time.sleep(0.1)
             blue.off()
             print(answer)
-    for i in range(len(leds)):
-        leds[i] = str(leds[i])
-        for led in leds:
-            print(leds[led])
+        print(leds)
+        print("\n")
         print(answer)
     if leds == answer:
         print("YOU WIN!!!")
