@@ -43,29 +43,31 @@ while True:
     while len(answer) <4:
         time.sleep(0.3)
         if red_button.is_pressed:
-            answer.append(red)
+            answer.append("red")
             red.on()
             time.sleep(0.1)
             red.off()
             print(answer)
         elif yellow_button.is_pressed:
-            answer.append(yellow)
+            answer.append("yellow")
             yellow.on()
             time.sleep(0.1)
             yellow.off()
             print(answer)
         elif green_button.is_pressed:
-            answer.append(green)
+            answer.append("green")
             green.on()
             time.sleep(0.1)
             green.off()
             print(answer)
         elif blue_button.is_pressed:
-            answer.append(blue)
+            answer.append("blue")
             blue.on()
             time.sleep(0.1)
             blue.off()
             print(answer)
+    for i in range(len(leds)):
+        leds[i] = str(leds[i])
     if leds == answer:
         print("YOU WIN!!!")
         for led in leds:
