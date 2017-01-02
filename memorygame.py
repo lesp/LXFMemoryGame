@@ -22,6 +22,7 @@ for led in leds:
 
 
 while True:
+    leds = [red, yellow, green, blue]
     red_button.wait_for_press()
     print("Standby for light sequence!!!")
     time.sleep(1)
