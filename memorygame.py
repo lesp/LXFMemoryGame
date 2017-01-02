@@ -37,7 +37,7 @@ def lights(colour,duration):
 leds = ["red","yellow","green","blue"]
 
 for led in leds:
-    lights(led)
+    lights(led,0.3)
 
 
 while True:
