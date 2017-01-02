@@ -73,3 +73,6 @@ while True:
         time.sleep(5)
         for led in leds:
             led.off()
+    else:
+        for blinks in range(10):
+            red.blink(on_time=0.1,off_time=0.1)
