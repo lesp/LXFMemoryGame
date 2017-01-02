@@ -54,7 +54,7 @@ while True:
     print("GO!!!")
     random.shuffle(leds)
     for led in leds:
-        print(led)
+        #print(led)
         lights(led)
     answer = []
     while len(answer) <4:
@@ -81,7 +81,10 @@ while True:
     if leds == answer:
         print("YOU WIN!!!")
         for blink in range(10):
+            lights("red")
+            lights("yellow")
             lights("green")
+            lights("blue")
     else:
         print("YOU LOSE!!!")
         for blink in range(10):
