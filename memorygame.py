@@ -40,9 +40,8 @@ leds = ["red","yellow","green","blue"]
 for led in leds:
     lights(led)
 
-"""
+
 while True:
-    leds = [red, yellow, green, blue]
     red_button.wait_for_press()
     print("Standby for light sequence!!!")
     time.sleep(1)
@@ -56,35 +55,25 @@ while True:
     random.shuffle(leds)
     for led in leds:
         print(led)
-        led.on()
-        time.sleep(0.5)
-        led.off()
+        lights(led)
     answer = []
     while len(answer) <4:
         time.sleep(0.3)
         if red_button.is_pressed:
-            answer.append("<gpiozero.LED object on pin GPIO2, active_high=True, is_active=False>")
-            red.on()
-            time.sleep(0.1)
-            red.off()
+            answer.append("red")
+            lights("red")
             print(answer)
         elif yellow_button.is_pressed:
-            answer.append("<gpiozero.LED object on pin GPIO3, active_high=True, is_active=False>")
-            yellow.on()
-            time.sleep(0.1)
-            yellow.off()
+            answer.append("yellow")
+            lights("yellow")
             print(answer)
         elif green_button.is_pressed:
-            answer.append("<gpiozero.LED object on pin GPIO4, active_high=True, is_active=False>")
-            green.on()
-            time.sleep(0.1)
-            green.off()
+            answer.append("green")
+            lights("green")
             print(answer)
         elif blue_button.is_pressed:
-            answer.append("gpiozero.LED object on pin GPIO17, active_high=True, is_active=False>")
-            blue.on()
-            time.sleep(0.1)
-            blue.off()
+            answer.append("blue")
+            lights("blue")
             print(answer)
 
     for i in range(len(leds)):
