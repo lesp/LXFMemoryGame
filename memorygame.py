@@ -23,12 +23,12 @@ def lights(colour,duration):
         time.sleep(duration)
         yellow_pin.off()
         time.sleep(duration)
-    if colour == "green":
+    elif colour == "green":
         green_pin.on()
         time.sleep(duration)
         green_pin.off()
         time.sleep(duration)
-    if colour == "blue":
+    elif colour == "blue":
         blue_pin.on()
         time.sleep(duration)
         blue_pin.off()
