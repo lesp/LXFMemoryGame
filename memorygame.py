@@ -15,6 +15,8 @@ blue_button = Button(23)
 
 leds = [red,yellow,green,blue]
 
+print(type(leds[1]))
+
 for led in leds:
     led.on()
     time.sleep(0.2)
@@ -67,9 +69,7 @@ while True:
             time.sleep(0.1)
             blue.off()
             print(answer)
-    print(leds)
-    print("\n")
-    print(answer)
+
     for i in range(len(leds)):
         leds[i] = str(leds[i])
     if leds == answer:
