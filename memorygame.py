@@ -28,7 +28,7 @@ def lights(colour):
         time.sleep(0.2)
         green_pin.off()
         time.sleep(0.2)
-    if colour == blue:
+    if colour == "blue":
         blue_pin.on()
         time.sleep(0.2)
         blue_pin.off()
