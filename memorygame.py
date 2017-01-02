@@ -2,28 +2,45 @@ import time
 import random
 from gpiozero import LED, Button
 
-red = LED(2)
-yellow = LED(3)
-green = LED(4)
-blue = LED(17)
-print(red)
+red_pin = LED(2)
+yellow_pin = LED(3)
+green_pin = LED(4)
+blue_pin = LED(17)
 
 red_button = Button(14)
 yellow_button = Button(15)
 green_button = Button(18)
 blue_button = Button(23)
 
-leds = [red,yellow,green,blue]
+def lights(colour):
+    if colour == "red":
+        red_pin.on()
+        time.sleep(0.2)
+        red_pin.off()
+        time.sleep(0.2)
+    elif colour == "yellow":
+        yellow_pin.on()
+        time.sleep(0.2)
+        yellow_pin.off()
+        time.sleep(0.2)
+    if colour == "green":
+        green_pin.on()
+        time.sleep(0.2)
+        green_pin.off()
+        time.sleep(0.2)
+    if colour == blue:
+        blue_pin.on()
+        time.sleep(0.2)
+        blue_pin.off()
+        time.sleep(0.2)
 
-print(type(leds[1]))
+leds = ["red","yellow","green","blue"]
+
 
 for led in leds:
-    led.on()
-    time.sleep(0.2)
-    led.off()
-    time.sleep(0.2)
+    lights(led)
 
-
+"""
 while True:
     leds = [red, yellow, green, blue]
     red_button.wait_for_press()
@@ -83,3 +100,4 @@ while True:
         red.blink(on_time=0.1,off_time=0.1)
         time.sleep(5)
         red.off()
+"""
