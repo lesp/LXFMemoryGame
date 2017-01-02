@@ -69,7 +69,7 @@ while True:
             print(answer)
     for i in range(len(leds)):
         leds[i] = str(leds[i])
-        for led in len(leds):
+        for led in leds:
             print(leds[led])
         print(answer)
     if leds == answer:
