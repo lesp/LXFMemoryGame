@@ -12,7 +12,7 @@ yellow_button = Button(15)
 green_button = Button(18)
 blue_button = Button(23)
 
-leds = ["red","yellow","green","blue"]
+leds = [red,yellow,green,blue]
 
 for led in leds:
     led.on()
@@ -67,7 +67,7 @@ while True:
             blue.off()
             print(answer)
     if sequence == answer:
-        print("YOU WIN!!!"
+        print("YOU WIN!!!")
         for led in leds:
             led.blink(on_time=0.2,off_time=0.2)
         time.sleep(5)
